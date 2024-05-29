@@ -29,9 +29,7 @@ public class Main {
                     throw var7;
                 }
 
-                if (statement != null) {
-                    statement.close();
-                }
+                statement.close();
             } catch (Throwable var8) {
                 if (connection != null) {
                     try {
@@ -44,12 +42,9 @@ public class Main {
                 throw var8;
             }
 
-            if (connection != null) {
-                connection.close();
-            }
+            connection.close();
         } catch (SQLException var9) {
-            SQLException ex = var9;
-            ex.printStackTrace();
+            var9.printStackTrace();
         }
 
     }
